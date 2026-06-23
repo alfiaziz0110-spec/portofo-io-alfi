@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek - Alfi Aziz Ramadhan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-icon">A</span>
+                <span class="brand-text">Alfi<span class="gradient-text">.dev</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle"><i class="bi bi-moon-fill"></i></button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="contact.html" class="btn btn-magnetic">
+                            <span>Hire Me</span><i class="bi bi-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <canvas class="header-particles"></canvas>
+        <div class="container text-center position-relative" style="z-index: 2;">
+            <span class="section-badge light" data-aos="fade-up">My Works</span>
+            <h1 class="display-4 fw-bold mt-3" data-aos="fade-up" data-aos-delay="100">
+                Proyek <span class="gradient-text-anim">Saya</span>
+            </h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Kumpulan proyek kuliah, tugas akhir, dan proyek pribadi</p>
+            <div class="breadcrumb-custom" data-aos="fade-up" data-aos-delay="300">
+                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <span>Projects</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Filter -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="filter-buttons">
+                    <button class="btn btn-filter active" data-filter="all">
+                        <i class="bi bi-grid"></i> Semua
+                    </button>
+                    <button class="btn btn-filter" data-filter="kuliah">
+                        <i class="bi bi-book"></i> Tugas Kuliah
+                    </button>
+                    <button class="btn btn-filter" data-filter="pribadi">
+                        <i class="bi bi-person"></i> Pribadi
+                    </button>
+                    <button class="btn btn-filter" data-filter="lomba">
+                        <i class="bi bi-trophy"></i> Lomba
+                    </button>
+                    <button class="btn btn-filter" data-filter="organisasi">
+                        <i class="bi bi-people"></i> Organisasi
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row g-4" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="kuliah" data-aos="fade-up">
+                    <div class="project-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <div class="placeholder-img bg-gradient-1">
+                                <i class="bi bi-shop"></i>
+                            </div>
+                            <span class="project-badge">Tugas Kuliah</span>
+                            <div class="project-overlay">
+                                <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info p-4">
+                            <h5 class="fw-bold">Sistem Informasi Perpustakaan</h5>
+                            <p class="text-muted small">
+                                Aplikasi web untuk manajemen peminjaman buku perpustakaan kampus 
+                                dengan fitur CRUD, laporan, dan multi-user.
+                            </p>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary-glow"><i class="bi bi-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-glow"><i class="bi bi-eye"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Featured -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="lomba" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card featured tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="featured-badge">⭐ Featured</div>
+                        <div class="project-image">
+                            <div class="placeholder-img bg-gradient-2">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <span class="project-badge winner">🏆 Juara 2</span>
+                            <div class="project-overlay">
+                                <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info p-4">
+                            <h5 class="fw-bold">EduCare - Platform Bimbingan Online</h5>
+                            <p class="text-muted small">
+                                Proyek hackathon 48 jam. Platform yang menghubungkan mahasiswa 
+                                dengan tutor untuk bimbingan akademik.
+                            </p>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary-glow"><i class="bi bi-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-glow"><i class="bi bi-eye"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="pribadi" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <div class="placeholder-img bg-gradient-3">
+                                <i class="bi bi-journal-text"></i>
+                            </div>
+                            <span class="project-badge">Proyek Pribadi</span>
+                            <div class="project-overlay">
+                                <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info p-4">
+                            <h5 class="fw-bold">Blog Pribadi - Catatan Kuliah</h5>
+                            <p class="text-muted small">
+                                Blog pribadi untuk berbagi catatan kuliah, tutorial, 
+                                dan pengalaman belajar programming.
+                            </p>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary-glow"><i class="bi bi-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-glow"><i class="bi bi-eye"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="organisasi" data-aos="fade-up">
+                    <div class="project-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <div class="placeholder-img bg-gradient-4">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <span class="project-badge">Organisasi</span>
+                            <div class="project-overlay">
+                                <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info p-4">
+                            <h5 class="fw-bold">Website Himpunan Mahasiswa</h5>
+                            <p class="text-muted small">
+                                Website resmi Himpunan Mahasiswa Informatika dengan 
+                                fitur berita, galeri, dan struktur organisasi.
+                            </p>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary-glow"><i class="bi bi-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-glow"><i class="bi bi-eye"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="kuliah" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <div class="placeholder-img bg-gradient-5">
+                                <i class="bi bi-calculator"></i>
+                            </div>
+                            <span class="project-badge">Tugas Kuliah</span>
+                            <div class="project-overlay">
+                                <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info p-4">
+                            <h5 class="fw-bold">Aplikasi Kalkulator Ilmiah</h5>
+                            <p class="text-muted small">
+                                Kalkulator ilmiah dengan fitur operasi matematika, 
+                                konversi satuan, dan grafik fungsi.
+                            </p>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary-glow"><i class="bi bi-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-glow"><i class="bi bi-eye"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="pribadi" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <div class="placeholder-img bg-gradient-6">
+                                <i class="bi bi-list-task"></i>
+                            </div>
+                            <span class="project-badge">Proyek Pribadi</span>
+                            <div class="project-overlay">
+                                <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info p-4">
+                            <h5 class="fw-bold">To-Do List App</h5>
+                            <p class="text-muted small">
+                                Aplikasi manajemen tugas dengan fitur kategori, 
+                                deadline, dan penyimpanan lokal (localStorage).
+                            </p>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">LocalStorage</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary-glow"><i class="bi bi-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-glow"><i class="bi bi-eye"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">A</span>
+                    <span class="brand-text">Alfi<span class="gradient-text">.dev</span></span>
+                </div>
+                <p class="footer-copyright">&copy; 2026 Alfi Aziz Ramadhan. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
